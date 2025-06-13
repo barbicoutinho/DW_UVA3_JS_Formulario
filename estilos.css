@@ -1,31 +1,93 @@
-/* Para que el mensaje no se salga, tenga márgenes iguales y padding */
-.mensaje {
-  margin: 20px 10px; /* margen vertical 20px, horizontal 10px */
-  padding: 12px 15px; /* relleno interno */
-  font-weight: 600;
-  font-size: 1rem;
-  text-align: center;
-  border-radius: 8px;
-  box-sizing: border-box; /* importante para que padding no aumente ancho */
-  max-width: 100%; /* que no exceda el contenedor */
-  word-wrap: break-word; /* que el texto se ajuste si es muy largo */
+/* Contenedor centrado con Flexbox */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f1ea; /* beige claro */
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
 
-/* Formulario responsive */
+/* Formulario */
 form {
   width: 100%;
   max-width: 480px;
-  background-color: #fff9f2;
+  background-color: #fff9f2; /* blanco con tono cálido */
   border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(102, 85, 62, 0.2);
+  box-shadow: 0 8px 20px rgba(102, 85, 62, 0.2); /* sombra cálida */
   padding: 30px 25px;
   box-sizing: border-box;
 }
 
-/* Inputs y textarea responsive */
+/* Inputs */
 .form-input {
   width: 100%;
+  padding: 12px 15px;
+  margin: 12px 0 20px 0;
+  border: 2px solid #a19c8e; /* marrón grisáceo */
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+  background-color: #faf6f0; /* muy claro beige */
+  color: #423d33; /* texto marrón oscuro */
   box-sizing: border-box;
+}
+
+.form-input::placeholder {
+  color: #b7b3a8; /* gris suave */
+}
+
+.form-input:focus {
+  border-color: #74825a; /* verde oliva */
+  outline: none;
+  background-color: #f5f7e3; /* verde muy suave */
+  color: #3a3a2f;
+}
+
+/* Botón enviar */
+.btn-enviar {
+  width: 100%;
+  background-color: #74825a; /* verde oliva */
+  color: #fff9f2; /* beige claro */
+  border: none;
+  padding: 14px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 5px 10px rgba(116, 130, 90, 0.4);
+}
+
+.btn-enviar:hover {
+  background-color: #5a6a3e; /* verde oliva más oscuro */
+}
+
+/* Mensajes con márgenes y padding iguales, responsive */
+.mensaje {
+  margin: 20px 10px;
+  padding: 12px 15px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: center;
+  border-radius: 8px;
+  box-sizing: border-box;
+  max-width: 100%;
+  word-wrap: break-word;
+}
+
+.error {
+  color: #8b3e2f; /* rojo ladrillo */
+  background-color: #f6d5d1;
+  border: 1px solid #cc6c5a;
+}
+
+.exito {
+  color: #4a5a28; /* verde oscuro */
+  background-color: #d7e3b6;
+  border: 1px solid #74825a;
 }
 
 /* Media query para pantallas pequeñas */
@@ -44,10 +106,4 @@ form {
   }
 
   .mensaje {
-    margin: 15px 5px;
-    font-size: 0.95rem;
-    padding: 10px 12px;
-  }
-}
-
-}
+    margin: 15p
