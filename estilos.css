@@ -1,52 +1,89 @@
+/* Contenedor centrado con Flexbox */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f2f2f2;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f1ea; /* beige claro */
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 20px;
 }
 
+/* Formulario */
 form {
-  max-width: 500px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 480px;
+  background-color: #fff9f2; /* blanco con tono cálido */
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(102, 85, 62, 0.2); /* sombra cálida */
+  padding: 30px 25px;
+  box-sizing: border-box;
 }
 
+/* Inputs */
 .form-input {
   width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  border: 2px solid #ccc;
-  border-radius: 5px;
+  padding: 12px 15px;
+  margin: 12px 0 20px 0;
+  border: 2px solid #a19c8e; /* marrón grisáceo */
+  border-radius: 8px;
+  font-size: 1rem;
   transition: border-color 0.3s;
+  background-color: #faf6f0; /* muy claro beige */
+  color: #423d33; /* texto marrón oscuro */
+}
+
+.form-input::placeholder {
+  color: #b7b3a8; /* gris suave */
 }
 
 .form-input:focus {
-  border-color: #007BFF;
+  border-color: #74825a; /* verde oliva */
   outline: none;
+  background-color: #f5f7e3; /* verde muy suave */
+  color: #3a3a2f;
 }
 
+/* Botón enviar */
 .btn-enviar {
-  background-color: #007BFF;
-  color: white;
+  width: 100%;
+  background-color: #74825a; /* verde oliva */
+  color: #fff9f2; /* beige claro */
   border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
+  padding: 14px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 10px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 5px 10px rgba(116, 130, 90, 0.4);
 }
 
 .btn-enviar:hover {
-  background-color: #0056b3;
+  background-color: #5a6a3e; /* verde oliva más oscuro */
 }
 
+/* Mensajes */
 .mensaje {
-  margin-top: 20px;
-  font-weight: bold;
+  margin-top: 22px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: center;
+  padding: 10px;
+  border-radius: 8px;
 }
 
 .error {
-  color: red;
+  color: #8b3e2f; /* rojo ladrillo */
+  background-color: #f6d5d1;
+  border: 1px solid #cc6c5a;
+}
+
+.exito {
+  color: #4a5a28; /* verde oscuro */
+  background-color: #d7e3b6;
+  border: 1px solid #74825a;
 }
 
 .exito {
